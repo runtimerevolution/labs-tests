@@ -1,0 +1,13 @@
+%%{init: {"theme":"default"}}%%
+erDiagram
+Author {
+  string name
+}
+Book {
+  string title
+}
+Category {
+  string name
+}
+Author ||--o{ Book : "has"
+Book }--o|| Category : "belongs to"
