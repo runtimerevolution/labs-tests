@@ -31,6 +31,9 @@ class TestCalculator(unittest.TestCase):
     def test_subtract_zeros(self):
         self.assertEqual(self.calc.subtract(0, 0), 0)
 
+    def test_hello_world(self):
+        self.assertEqual(self.calc.hello_world(), "Hello World")
+
 
 if __name__ == "__main__":
     unittest.main()
