@@ -1,0 +1,20 @@
+classDiagram
+  Author {
+    int id
+    String name
+    Date dateOfBirth
+  }
+  
+  Book {
+    int id
+    String title
+    String isbn
+  }
+  
+  Category {
+    int id
+    String name
+  }
+  
+  Author "1" --o "n" Book : Has
+  Book "n" --o "n" Category : Belongs
