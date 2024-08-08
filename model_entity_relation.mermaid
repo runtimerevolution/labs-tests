@@ -1,0 +1,23 @@
+classDiagram
+Author {
+  String authorId
+  String name
+  List<Book> books
+}
+Book {
+  String bookId
+  String title
+  List<Category> categories
+  List<Instance> instances
+}
+Category {
+  String categoryId
+  String name
+  List<Book> books
+}
+Instance {
+  String instanceId
+  String status
+  Date requestedDate
+  Book book
+}
