@@ -15,5 +15,8 @@ class TestHelloWorld(unittest.TestCase):
     def test_print_new_message(self):
         self.assertEqual(self.hw.print_new_message(), "Hello, Test World!")
 
+    def test_print_another_message(self):
+        self.assertEqual(self.hw.print_another_message(), "Hello, New World!")
+
 if __name__ == "__main__":
     unittest.main()

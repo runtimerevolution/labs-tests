@@ -1,3 +1,4 @@
+
 class HelloWorld:
     def print_message(self):
         return "Hello World!"
@@ -7,3 +8,6 @@ class HelloWorld:
 
     def print_new_message(self):
         return "Hello, Test World!"
+
+    def print_another_message(self):
+        return "Hello, New World!"
