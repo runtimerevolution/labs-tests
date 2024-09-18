@@ -1,3 +1,4 @@
+
 import unittest
 
 from hello_world import HelloWorld
@@ -11,6 +12,9 @@ class TestHelloWorld(unittest.TestCase):
 
     def test_print_modified_message(self):
         self.assertEqual(self.hw.print_modified_message(), "Hello, World!")
+
+    def test_print_new_message(self):
+        self.assertEqual(self.hw.print_new_message(), "Hello, Test World!")
 
 
 if __name__ == "__main__":
