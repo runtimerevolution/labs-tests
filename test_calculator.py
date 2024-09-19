@@ -1,5 +1,6 @@
 
 import unittest
+
 from calculator import Calculator
 
 
@@ -34,8 +35,8 @@ class TestCalculator(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(self.calc.multiply(10, 5), 50)
 
-    def test_multiply_with_zero(self):
-        self.assertEqual(self.calc.multiply(0, 5), 0)
+    def test_multiply_by_zero(self):
+        self.assertEqual(self.calc.multiply(10, 0), 0)
 
     def test_multiply_negative_with_positive(self):
         self.assertEqual(self.calc.multiply(-1, 1), -1)
@@ -46,15 +47,18 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(self.calc.divide(10, 5), 2)
 
+    def test_divide_with_remainder(self):
+        self.assertEqual(self.calc.divide(10, 4), 2.5)
+
+    def test_divide_by_negative(self):
+        self.assertEqual(self.calc.divide(10, -2), -5)
+
+    def test_divide_negative_by_negative(self):
+        self.assertEqual(self.calc.divide(-10, -2), 5)
+
     def test_divide_by_zero(self):
         with self.assertRaises(ValueError):
             self.calc.divide(10, 0)
-
-    def test_divide_negative_with_positive(self):
-        self.assertEqual(self.calc.divide(-10, 5), -2)
-
-    def test_divide_negative_with_negative(self):
-        self.assertEqual(self.calc.divide(-10, -5), 2)
 
 
 if __name__ == "__main__":
