@@ -4,7 +4,6 @@ import unittest
 from calculator import Calculator
 from hello_world import hello_world
 
-
 class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
