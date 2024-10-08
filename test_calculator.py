@@ -1,3 +1,4 @@
+
 import unittest
 
 from calculator import Calculator
@@ -30,6 +31,28 @@ class TestCalculator(unittest.TestCase):
 
     def test_subtract_zeros(self):
         self.assertEqual(self.calc.subtract(0, 0), 0)
+
+    def test_multiply(self):
+        self.assertEqual(self.calc.multiply(10, 5), 50)
+
+    def test_multiply_with_zero(self):
+        self.assertEqual(self.calc.multiply(10, 0), 0)
+
+    def test_multiply_with_negative(self):
+        self.assertEqual(self.calc.multiply(-1, 5), -5)
+
+    def test_divide(self):
+        self.assertEqual(self.calc.divide(10, 5), 2)
+
+    def test_divide_by_one(self):
+        self.assertEqual(self.calc.divide(10, 1), 10)
+
+    def test_divide_negative(self):
+        self.assertEqual(self.calc.divide(-10, 5), -2)
+
+    def test_divide_raises(self):
+        with self.assertRaises(ValueError):
+            self.calc.divide(10, 0)
 
 
 if __name__ == "__main__":
