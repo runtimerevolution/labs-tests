@@ -29,6 +29,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtract(-1, -1), 0)
 
     def test_subtract_zeros(self):
+
+    def test_square_root(self):
+        self.assertEqual(self.calc.square_root(16), 4)
+
+    def test_square_root_of_zero(self):
+        self.assertEqual(self.calc.square_root(0), 0)
+
+    def test_square_root_of_negative(self):
+        with self.assertRaises(ValueError):
+            self.calc.square_root(-1)
         self.assertEqual(self.calc.subtract(0, 0), 0)
 
 
