@@ -9,5 +9,5 @@ class Calculator:
 
     def divide(self, x, y):
         if y == 0:
-            raise ValueError('Cannot divide by zero')
+            raise ValueError("Cannot divide by zero.")
         return x / y
